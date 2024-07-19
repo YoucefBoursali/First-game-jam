@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuaj5vgspa3om"]
+
+[ext_resource type="PackedScene" uid="uid://bp5wrdhreyo6t" path="res://Scenes/player.tscn" id="1_c1vu2"]
+[ext_resource type="Texture2D" uid="uid://cbrpygik0n5o7" path="res://Assets/tile map.png" id="2_lrf23"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6k84"]
+texture = ExtResource("2_lrf23")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0.0883884, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0, -8, -0.0883884, -8, -8, 8, -8)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0, -8, -0.0883884, -8, -8, 8, -8)
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0, -8, -0.0883884, -8, -8, 8, -8)
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0, -8, -0.0883884, -8, -8, 8, -8)
+
+[sub_resource type="TileSet" id="TileSet_0mx4o"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_f6k84")
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_c1vu2")]
+position = Vector2(81, 1)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(32, -1)
+tile_set = SubResource("TileSet_0mx4o")
+format = 2
+layer_0/tile_data = PackedInt32Array(65538, 0, 0, 65539, 0, 0, 65540, 327680, 0, 65541, 131072, 0, 65542, 327680, 0, 65543, 0, 0, 65544, 196608, 0, 65537, 65536, 1, 65545, 65536, 0, 65546, 131072, 1, 131082, 196608, 1, 131083, 262144, 1, 131073, 65536, 2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(81, 1)
+zoom = Vector2(3, 3)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

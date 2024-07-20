@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bp5wrdhreyo6t"]
+[gd_scene load_steps=11 format=3 uid="uid://bp5wrdhreyo6t"]
 
-[ext_resource type="Script" path="res://Scenes/player.gd" id="1_vwt40"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_tmd8c"]
 [ext_resource type="Texture2D" uid="uid://bwo6vkq8ywwt8" path="res://Assets/boring guy.png" id="2_hua1u"]
+[ext_resource type="Texture2D" uid="uid://dw3jf4orjtoix" path="res://Assets/Light.png" id="3_c05uq"]
+[ext_resource type="Script" path="res://Scripts/Light.gd" id="4_hjr8q"]
 
 [sub_resource type="Animation" id="Animation_megne"]
 length = 3.0
@@ -29,34 +31,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_x3xns"]
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = false
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_bma7k"]
@@ -87,6 +61,34 @@ tracks/1/keys = {
 "values": [4]
 }
 
+[sub_resource type="Animation" id="Animation_x3xns"]
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ey26c"]
 _data = {
 "Idle": SubResource("Animation_megne"),
@@ -98,11 +100,14 @@ _data = {
 radius = 5.0
 height = 16.0
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qqen4"]
+
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_vwt40")
+script = ExtResource("1_tmd8c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(-1, -16)
 texture = ExtResource("2_hua1u")
 hframes = 3
 vframes = 2
@@ -132,8 +137,20 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 8)
+position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_nwh7b")
+
+[node name="Light" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 0.454902, 0.415686)
+position = Vector2(10, -11)
+texture = ExtResource("3_c05uq")
+script = ExtResource("4_hjr8q")
+facing_right = Vector2(10, -9)
+facing_left = Vector2(-10, -9)
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+texture = SubResource("PlaceholderTexture2D_qqen4")
+texture_scale = 5.5
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 0.2
